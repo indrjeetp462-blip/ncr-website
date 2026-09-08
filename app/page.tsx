@@ -1,71 +1,52 @@
 export const metadata = {
-  title: "Kitchen Chimney Cleaning & Repair Delhi NCR | ₹1650 Only",
-  description: "NCR Chimney Solution - Chimney Deep Cleaning ₹1650, Lacquer Coating, Repair All Faults, Same Day Service, Technician Visit ₹299. Delhi Noida Ghaziabad Gurgaon.",
-  verification: {
-    google: "n3qt1n4VOu3Oh7e_YJ6IDTHqAPxuvlJeQlLtljIVSoU",
-  },
+  title: "Chimney Service in Delhi NCR @299 | South Delhi, Noida, Greater Noida, Ghaziabad, Faridabad, Gurgaon",
+  description: "Best Independent Chimney Service in Delhi NCR @299. South Delhi, Delhi, Noida, Greater Noida, Ghaziabad, Faridabad, Gurgaon. Faber, Glen, Elica, Hindware, Kaff Service. Call 8796284796",
+  verification: { google: "n3qtn4VOu30h7e_YJ6IDTHqAPxuvJJQe1l1tjIVSoU" },
 };
 
 export default function Home(){
- const ph="8796284796";
- const i1="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600";
- const i2="https://images.unsplash.com/photo-1556911220-bff31c812dba?w=600";
- const i3="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600";
- return(
-<main>
-<style>{`*{font-family:system-ui,sans-serif;margin:0;padding:0;box-sizing:border-box} body{overflow:auto!important} .top{position:sticky;top:0;z-index:99;background:#fff;padding:10px 16px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #eee} .hero{padding:20px 16px} .btn_g{background:#25D366;color:#fff;padding:14px;border-radius:10px;text-align:center;text-decoration:none;display:block;font-weight:900;margin-top:12px} .btn_w{background:#000;color:#fff;padding:14px;border-radius:10px;text-align:center;text-decoration:none;display:block;font-weight:900;margin-top:8px} .list{list-style:none;margin-top:12px} .list li{background:#fff;padding:12px;border-radius:10px;margin-bottom:8px;border:1px solid #eee} .card{border-radius:16px;overflow:hidden;border:1px solid #eee;margin-bottom:12px;background:#fff} .card img{width:100%;height:180px;object-fit:cover} .card div{padding:10px;font-weight:700} .brand{background:#fff;border:1px solid #eee;padding:10px;text-align:center;border-radius:10px;font-weight:800;font-size:12px} .bottom{position:fixed;bottom:0;left:0;right:0;background:#fff;padding:10px 16px;border-top:1px solid #eee;display:flex;gap:10px;z-index:99}`}</style>
+  const ph="8796284796";
+  return(
+<main style={{fontFamily:'system-ui'}}>
+<style>{`.hero{background:url('https://images.unsplash.com/photo-1556911220-bff31c812a7a?w=800') center/cover;position:relative} .hero::before{content:'';position:absolute;inset:0;background:#0009} .q{background:#fff;border:1px solid #e5e7eb;padding:12px;border-radius:10px;margin-bottom:8px} .bottom{position:fixed;bottom:0;left:0;right:0;display:flex;gap:8px;padding:10px;background:#fff;box-shadow:0 -2px 10px #0002;z-index:20}`}</style>
 
-<div className="top"><b>NCR CHIMNEY</b><span style={{background:'#25D366',padding:'4px 8px',borderRadius:'20px',fontSize:'12px',color:'#fff',fontWeight:900}}>4.9/5 Rated</span></div>
+<div style={{padding:'12px 16px',display:'flex',justifyContent:'space-between',background:'#fff',position:'sticky',top:0,zIndex:10}}><b>NCR CHIMNEY @299</b><span style={{background:'#22c55e',color:'#fff',padding:'4px 10px',borderRadius:20,fontSize:12}}>Independent</span></div>
 
-<div className="hero">
-<div style={{color:'gold',fontWeight:900}}>★ 4.9/5 Rated - Delhi NCR #1</div>
-<h1 style={{fontSize:'28px',fontWeight:900,marginTop:'12px',lineHeight:'1.1'}}>Kitchen Chimney Cleaning & Repair Expert</h1>
-<p style={{marginTop:'8px',color:'#aaa'}}>Professional Technician Visit in 60 Mins</p>
-<a href={'https://wa.me/91'+ph} className="btn_g">WhatsApp {ph}</a>
-<a href={'tel:+91'+ph} className="btn_w">📞 CALL {ph}</a>
+<div className="hero" style={{padding:'36px 16px',color:'#fff'}}>
+<div style={{position:'relative',zIndex:1}}>
+<h1 style={{fontSize:'30px',fontWeight:900,lineHeight:1.1}}>Chimney Service in South Delhi, Delhi, Noida, Greater Noida, Ghaziabad, Faridabad, Gurgaon @299</h1>
+<p style={{marginTop:10}}>Independent Service for Faber, Glen, Elica, Hindware, Kaff - 60 Mins Visit</p>
+<div style={{marginTop:16,display:'flex',gap:8}}>
+<a href={`https://wa.me/91${ph}`} style={{background:'#25D366',color:'#fff',padding:'12px 18px',borderRadius:10,textDecoration:'none',fontWeight:800}}>BOOK SERVICE</a>
+<a href={`tel:+91${ph}`} style={{background:'#fff',color:'#000',padding:'12px 18px',borderRadius:10,textDecoration:'none',fontWeight:800}}>CALL {ph}</a>
+</div>
+</div>
 </div>
 
-<div style={{padding:'16px',paddingBottom:'110px'}}>
+<div style={{padding:'16px',paddingBottom:110}}>
 
-<div style={{background:'#f7f7f7',borderRadius:'16px',padding:'16px'}}>
-<h2 style={{marginBottom:'10px'}}>Our Services</h2>
-<ul className="list">
-<li><span>✔</span> Chimney Deep Cleaning - ₹1650</li>
-<li><span>✔</span> Chimney Lacquer Coating</li>
-<li><span>✔</span> Chimney Repair - All Faults</li>
-<li><span>✔</span> Same Day Service</li>
-<li><span>✔</span> Professional Technician Visit - ₹299</li>
-</ul>
+{/* JAWAB / FAQ SECTION - CODE ME JAWAB */}
+<h2 style={{margin:'10px 0'}}>Chimney Service - Sare Jawab</h2>
+
+<div className="q"><b>Q: South Delhi me chimney service kitne me hota hai?</b><br/><span style={{fontSize:13,color:'#444'}}>Jawab: South Delhi me hamari chimney service sirf @299 visit charge me hoti hai. Cleaning ₹1650 se start hai. Same day technician Saket, Malviya Nagar, GK, Vasant Kunj, Lajpat Nagar me pahuch jayega. Call {ph}</span></div>
+
+<div className="q"><b>Q: Noida / Greater Noida me chimney repair karte ho?</b><br/><span style={{fontSize:13,color:'#444'}}>Jawab: Haan, Noida, Greater Noida, Indirapuram, Vaishali, Crossings me 60 minute me service. Faber, Glen, Elica sab brand ka repair karte hai.</span></div>
+
+<div className="q"><b>Q: Kya aap official company service ho?</b><br/><span style={{fontSize:13,color:'#444'}}>Jawab: Nahi, hum Independent third-party chimney service provider hai Delhi NCR me. Hum Faber, Glen, Elica, Hindware ke authorized service centre nahi hai. Hum independent service dete hai isliye sasta aur fast hai. Brand ke naam sirf pehchan ke liye use kiye hai.</span></div>
+
+<div className="q"><b>Q: Kaun kaun se brand ki service karte ho?</b><br/><span style={{fontSize:13,color:'#444'}}>Jawab: Faber Chimney Service, Glen Chimney Service, Elica Chimney Service, Hindware Chimney Service, Kaff, Sunflame, Bosch, Siemens sabhi ki service karte hai.</span></div>
+
+<div style={{marginTop:16,background:'#f8fafc',padding:12,borderRadius:10,border:'1px solid #e2e8f0'}}>
+<p style={{fontSize:13,lineHeight:1.7}}><b>Full NCR Coverage:</b> Chimney Service in South Delhi, Delhi, Noida, Greater Noida, Ghaziabad, Faridabad, Gurgaon, Dwarka, Rohini, Pitampura, Janakpuri, Uttam Nagar, Lajpat Nagar, Saket, GK, Vasant Kunj, Hauz Khas, Preet Vihar, Laxmi Nagar, Indirapuram, Vaishali, Vasundhara, NIT Faridabad, DLF Gurgaon, Sohna Road, Manesar</p>
+<p style={{fontSize:11,color:'#888',marginTop:10,borderTop:'1px solid #ddd',paddingTop:8}}>Disclaimer: Independent Service Provider. Not official/authorized centre of any brand. All brands for identification only.</p>
 </div>
 
-<h2 style={{margin:'20px 0 12px'}}>Our Work</h2>
-<div className="card"><img src={i1} alt="cleaning"/><div>Deep Cleaning Service<p style={{color:'#666',fontSize:'13px'}}>Oil & Grease Removed 100%</p></div></div>
-<div className="card"><img src={i2} alt="before after"/><div>Lacquer Coating + Cleaning<p style={{color:'#666',fontSize:'13px'}}>Before / After Result</p></div></div>
-<div className="card"><img src={i3} alt="repair"/><div>Repair & Installation<p style={{color:'#666',fontSize:'13px'}}>All Brands Supported</p></div></div>
-
-<h2 style={{margin:'20px 0 12px'}}>All Brands We Service</h2>
-<div style={{display:'grid',gridTemplateColumns:'1fr 1fr 1fr',gap:'8px'}}>
-<div className="brand">HINDWARE</div>
-<div className="brand">FABER</div>
-<div className="brand">ELICA</div>
-<div className="brand">SIEMENS</div>
-<div className="brand">GLEN</div>
-<div className="brand">SUNFLAME</div>
-<div className="brand">BOSCH</div>
-<div className="brand">KAFF & More</div>
-</div>
-
-</div>
-
-<div style={{marginTop:'20px',background:'#111',color:'#fff',padding:'16px',borderRadius:'16px',textAlign:'center'}}>
-<h3>📍 Delhi | Noida | Gurgaon | Faridabad | Ghaziabad</h3>
-<p style={{marginTop:'8px',color:'#25D366',fontWeight:900}}>✔ Same Day ✔ Professional Technician Visit</p>
 </div>
 
 <div className="bottom">
-<a href={'tel:+91'+ph} style={{flex:1,background:'#000',color:'#fff',padding:'14px',borderRadius:'10px',textAlign:'center',textDecoration:'none',fontWeight:900}}>CALL NOW</a>
-<a href={'https://wa.me/91'+ph} style={{flex:1,background:'#25D366',color:'#fff',padding:'14px',borderRadius:'10px',textAlign:'center',textDecoration:'none',fontWeight:900}}>WhatsApp Booking</a>
+<a href={`tel:+91${ph}`} style={{flex:1,background:'#000',color:'#fff',padding:14,borderRadius:10,textAlign:'center',textDecoration:'none',fontWeight:900}}>CALL NOW</a>
+<a href={`https://wa.me/91${ph}`} style={{flex:1,background:'#25D366',color:'#fff',padding:14,borderRadius:10,textAlign:'center',textDecoration:'none',fontWeight:900}}>BOOK ON WHATSAPP</a>
 </div>
 </main>
- )
+  )
 }
