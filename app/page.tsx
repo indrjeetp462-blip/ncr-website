@@ -1,20 +1,39 @@
 "use client";
+import { useState } from "react";
 export default function Home(){
-const ph="8706284796";
-const wa=`https://wa.me/91${ph}`;
+const ph="8796284796";
+const [o,setO]=useState(false);
 return(
-<main aria-label="NCR Chimney Website" style={{fontFamily:'system-ui',paddingBottom:'90px',background:'#f5f5f5'}}>
-<div aria-label="Offer Banner" style={{background:'#ffcc00',textAlign:'center',padding:'10px',fontWeight:'bold'}}>🔥 Chimney Service @ Rs 1650 - Delhi NCR 🔥</div>
-<header aria-label="Header" style={{background:'white',padding:'15px',display:'flex',justifyContent:'space-between',boxShadow:'0 2px 10px rgba(0,0,0,0.1)'}}>
-<b style={{fontSize:'20px'}}>NCR CHIMNEY 🔥</b>
-<a aria-label="Call" href={`tel:+91${ph}`} style={{background:'black',color:'white',padding:'8px 15px',borderRadius:'20px',textDecoration:'none'}}>📞 Call</a>
-</header>
-<div style={{padding:'20px',background:'black',color:'white',textAlign:'center'}}>
-<h1 style={{fontSize:'30px',fontWeight:900}}>Professional<br/>Chimney Service</h1>
-<p>10,000+ Customers | Same Day</p>
+<main>
+<style>{`*{font-family:system-ui;margin:0;padding:0;box-sizing:border-box}
+.top{background:#111;color:#fff;padding:12px 15px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100}
+.hero{background:#000;color:#fff;text-align:center;padding:25px 15px 90px}
+.btn{display:block;width:100%;padding:16px;border-radius:50px;font-weight:900;font-size:18px;text-align:center;margin:12px 0;text-decoration:none}
+.g{background:#25D366;color:#fff}
+.w{background:#fff;color:#000}
+.bottom{position:fixed;bottom:0;left:0;right:0;background:#fff;display:flex;gap:10px;padding:12px;border-top:1px solid #ddd;z-index:9999}
+.bottom a{flex:1;padding:14px;border-radius:10px;text-align:center;font-weight:900;text-decoration:none}
+`}</style>
+
+<div className="top"><b>NCR CHIMNEY</b><button onClick={()=>setO(!o)} style={{background:'#333',color:'#fff',padding:'8px 14px',borderRadius:'10px'}}>MENU</button></div>
+
+<div className="hero">
+<div style={{color:'gold',fontWeight:900}}>4.9/5 Rated | 10000+ Happy Customers</div>
+<h1 style={{fontSize:'38px',fontWeight:900,marginTop:'20px'}}>Kitchen Chimney<br/>Cleaning & Repair<br/><span style={{color:'orange'}}>Expert</span></h1>
+<p style={{marginTop:'12px',color:'#aaa'}}>All Brands Service in 60 Minutes - Delhi NCR</p>
+<a href={`https://wa.me/91${ph}`} className="btn g">WhatsApp {ph}</a>
+<a href={`tel:+91${ph}`} className="btn w">CALL {ph}</a>
+<div style={{color:'#888',marginTop:'10px'}}>Delhi | Noida | Gurgaon | Faridabad | Ghaziabad</div>
 </div>
-<section aria-label="Our Work Photos" style={{padding:'20px 15px',background:'white'}}>
-<h2 style={{textAlign:'center',fontWeight:900}}>Our Live Work 📸</h2>
-<img alt="Chimney Cleaning Work 1" src="https://images.unsplash.com/photo-1484154218962-a197022b5858?w=800" style={{width:'100%',height:'220px',objectFit:'cover',borderRadius:'15px',marginTop:'15px'}}/>
-<img alt="Chimney Repair Work 2" src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800" style={{width:'100%',height:'220px',objectFit:'cover',borderRadius:'15px',marginTop:'15px'}}/>
-<img alt="Chimney Service Work 3
+
+<div style={{padding:'20px',textAlign:'center',paddingBottom:'100px'}}>
+<h2>Our Services - Deep Cleaning Rs. 1650 | Repair Rs. 299</h2>
+</div>
+
+<div className="bottom">
+<a href={`tel:+91${ph}`} style={{background:'#000',color:'#fff'}}>CALL NOW</a>
+<a href={`https://wa.me/91${ph}`} style={{background:'#25D366',color:'#fff'}}>WhatsApp Booking</a>
+</div>
+
+</main>
+)}
