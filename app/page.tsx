@@ -10,8 +10,24 @@ export default function Page() {
     return () => clearTimeout(t)
   }, [])
 
+  // 50000 chars SEO generate
+  const brands = ["Faber","Elica","Kaff","Hindware","Glen","Bosch","Hafele","Sunflame","Prestige","Pigeon","Carysil","Seavy","Kutchina","BlowHot","Eurodomo","Inalsa","Whirlpool","LG","Samsung","Faber India"]
+  const areas = ["Patel Nagar","Shalimar Garden","Raj Nagar","Raj Nagar Extension","Kavi Nagar","Indirapuram","Ahinsa Khand 1","Ahinsa Khand 2","Nyay Khand","Shakti Khand","Gyani Border","Shipra Suncity","Vaishali","Vasundhara","Kaushambi","Crossing Republik","Sahibabad","Mohan Nagar","Shyam Park","Govindpuram","Vijay Nagar","Pratap Vihar","Wave City","Gaur City","Gaur City 1","Gaur City 2","Noida","Noida Sector 18","Noida Sector 62","Noida Sector 50","Greater Noida","Delhi","East Delhi","Laxmi Nagar","Preet Vihar"]
+  const services = ["repair","service","cleaning","deep cleaning","motor repair","pcb repair","touch panel repair","filter replacement","carbon filter change","baffle filter cleaning","duct cleaning","installation","auto clean repair","filterless repair","suction repair","noise repair","oil leak repair","not starting repair"]
+
+  let seoText = ""
+  areas.forEach(a => {
+    brands.forEach(b => {
+      services.forEach(s => {
+        seoText += `chimney ${s} in ${a} ghaziabad, ${b.toLowerCase()} chimney ${s} in ${a}, ${b.toLowerCase()} chimney ${s} in ghaziabad, kitchen chimney ${s} ${a}, `
+      })
+    })
+  })
+  // Extra long tail to make 50000+
+  seoText += `chimney repair ghaziabad 201001, chimney repair ghaziabad 201014, chimney repair ghaziabad 201010, chimney service near me, chimney repair near me, best chimney repair service in ghaziabad, same day chimney repair ghaziabad, doorstep chimney repair ghaziabad, professional chimney technician ghaziabad, local chimney service ghaziabad, `.repeat(200)
+
   return (
-    <div style={{fontFamily:"Arial", background:"#ffffff", color:"#111827", margin:0}}>
+    <div style={{fontFamily:"Arial", background:"#fff", color:"#111827", margin:0}}>
       
       <div style={{background:"#0f172a", color:"#fff", padding:"8px 16px", fontSize:"11px", display:"flex", justifyContent:"space-between"}}>
         <span>Same Day Service Ghaziabad Noida</span><span>Call: 8796284796</span>
@@ -32,14 +48,8 @@ export default function Page() {
         </div>
       </div>
 
-      <div style={{margin:"16px", display:"grid", gridTemplateColumns:"1fr 1fr 1fr", gap:"8px"}}>
-        <div style={{border:"1px solid #e2e8f0", borderRadius:"12px", padding:"12px", textAlign:"center"}}><div style={{fontWeight:"900"}}>5000+</div><div style={{fontSize:"10px"}}>Repairs</div></div>
-        <div style={{border:"1px solid #e2e8f0", borderRadius:"12px", padding:"12px", textAlign:"center"}}><div style={{fontWeight:"900"}}>4.9 Star</div><div style={{fontSize:"10px"}}>Rating</div></div>
-        <div style={{border:"1px solid #e2e8f0", borderRadius:"12px", padding:"12px", textAlign:"center"}}><div style={{fontWeight:"900"}}>30 Min</div><div style={{fontSize:"10px"}}>Arrival</div></div>
-      </div>
-
       <div style={{margin:"16px", border:"1px solid #e2e8f0", borderRadius:"16px", overflow:"hidden"}}>
-        <div style={{padding:"16px", fontWeight:"900", fontSize:"16px", background:"#0f172a", color:"#fff"}}>Common Chimney Issues We Fix</div>
+        <div style={{padding:"16px", fontWeight:"900", fontSize:"16px", background:"#0f172a", color:"#fff"}}>Common Chimney Issues We Fix in Ghaziabad</div>
         <div style={{display:"grid"}}>
           <div style={{display:"grid", gridTemplateColumns:"1.2fr 1fr 1fr", padding:"12px", background:"#f8fafc", fontWeight:"800", fontSize:"12px"}}><span>Issue</span><span>You Notice</span><span>Our Fix</span></div>
           <div style={{display:"grid", gridTemplateColumns:"1.2fr 1fr 1fr", padding:"12px", fontSize:"12px", borderTop:"1px solid #f1f5f9"}}><span>Smoke Not Pulled</span><span>Smoke in kitchen</span><span>Motor, Duct Service</span></div>
@@ -51,46 +61,31 @@ export default function Page() {
       <div style={{margin:"16px", background:"#f8fafc", borderRadius:"16px", padding:"16px", border:"1px solid #e2e8f0"}}>
         <div style={{fontWeight:"900", fontSize:"16px"}}>All Brands We Service</div>
         <div style={{marginTop:"12px", display:"grid", gridTemplateColumns:"1fr 1fr 1fr", gap:"8px"}}>
-          {["Elica","Glen","Kaff","Faber","Hindware","Bosch","Hafele","Sunflame","Prestige","Pigeon","Carysil","Seavy","Kutchina","BlowHot","Eurodomo","Inalsa"].map(b=>(
+          {brands.slice(0,16).map(b=>(
             <div key={b} style={{background:"#fff", border:"1px solid #e2e8f0", padding:"10px", borderRadius:"10px", textAlign:"center", fontWeight:"800", fontSize:"12px"}}>{b}</div>
           ))}
         </div>
       </div>
 
-      <div style={{margin:"16px"}}>
-        <div style={{fontWeight:"900", fontSize:"16px", marginBottom:"10px"}}>FAQ</div>
-        {[
-          {q:"How often should I service my chimney?", a:"Empty oil collector every 2-3 weeks and deep cleaning every 6-8 months."},
-          {q:"Do you provide installation?", a:"Yes, Rs 999-1499 including mounting and ducting up to 3 feet."},
-          {q:"Service available in my area?", a:"All Ghaziabad, Indirapuram, Vaishali, Vasundhara, Kaushambi, Raj Nagar Ext, Crossing Republik, Sahibabad, Noida, Greater Noida."},
-        ].map((f,i)=>(
-          <div key={i} onClick={()=>setFaq(faq===i? -1 : i)} style={{border:"1px solid #e2e8f0", borderRadius:"12px", padding:"14px", marginBottom:"8px", cursor:"pointer", background: faq===i ? "#f8fafc" : "#fff"}}>
-            <div style={{fontWeight:"800", fontSize:"13px", display:"flex", justifyContent:"space-between"}}>{f.q}<span>{faq===i ? "-" : "+"}</span></div>
-            {faq===i && <div style={{fontSize:"12px", color:"#475569", marginTop:"8px"}}>{f.a}</div>}
-          </div>
-        ))}
+      {/* SEO - 50000 CHARS */}
+      <div style={{background:"#0f172a", padding:"20px 16px", marginTop:"20px", marginBottom:"80px"}}>
+        <div style={{fontWeight:"900", fontSize:"14px", color:"#fff"}}>Service Areas - 50000 Keywords SEO Block</div>
+        <div style={{fontSize:"10px", color:"#64748b", lineHeight:"2", marginTop:"12px", textAlign:"justify", wordBreak:"break-word"}}>
+          {seoText}
+        </div>
+        <div style={{marginTop:"16px", textAlign:"center", fontSize:"11px", color:"#475569"}}>© 2026 NCR Chimney Expert | Total SEO Length: {seoText.length} characters | Call 8796284796</div>
       </div>
 
-      <div style={{background:"#f8fafc", borderTop:"1px solid #e2e8f0", padding:"20px 16px", marginBottom:"80px"}}>
-        <div style={{fontWeight:"900", fontSize:"14px"}}>Service Areas</div>
-        <div style={{fontSize:"11px", color:"#475569", marginTop:"8px", lineHeight:"1.8"}}>Ghaziabad, Patel Nagar, Shalimar Garden, Raj Nagar, Indirapuram, Vaishali, Vasundhara, Kaushambi, Crossing Republik, Sahibabad, Noida, Greater Noida, Delhi NCR</div>
-      </div>
-
-      {/* BOTTOM FIXED CALL */}
       <a href="tel:8796284796" style={{position:"fixed", bottom:0, left:0, right:0, background:"#dc2626", color:"#fff", padding:"16px", textAlign:"center", fontWeight:"900", fontSize:"15px", textDecoration:"none", zIndex:30}}>Call Now - 8796284796</a>
 
-      {/* POPUP CALL */}
       {showPopup && (
-        <div style={{position:"fixed", inset:0, background:"rgba(0,0,0,0.6)", backdropFilter:"blur(4px)", display:"flex", alignItems:"center", justifyContent:"center", zIndex:50, padding:"20px"}}>
-          <div style={{background:"#fff", borderRadius:"20px", padding:"24px", width:"100%", maxWidth:"340px", textAlign:"center", boxShadow:"0 20px 60px rgba(0,0,0,0.3)", animation:"pop 0.3s"}}>
-            <div style={{width:"60px", height:"60px", background:"linear-gradient(135deg,#dc2626,#ef4444)", borderRadius:"50%", margin:"0 auto 12px", display:"flex", alignItems:"center", justifyContent:"center", fontSize:"28px"}}>📞</div>
+        <div style={{position:"fixed", inset:0, background:"rgba(0,0,0,0.6)", display:"flex", alignItems:"center", justifyContent:"center", zIndex:50, padding:"20px"}}>
+          <div style={{background:"#fff", borderRadius:"20px", padding:"24px", width:"100%", maxWidth:"340px", textAlign:"center"}}>
+            <div style={{width:"60px", height:"60px", background:"#dc2626", borderRadius:"50%", margin:"0 auto 12px", display:"flex", alignItems:"center", justifyContent:"center", fontSize:"28px", color:"#fff"}}>📞</div>
             <div style={{fontWeight:"900", fontSize:"20px"}}>Need Chimney Repair?</div>
-            <div style={{fontSize:"13px", color:"#64748b", marginTop:"6px"}}>Technician available nearby - 30 min arrival in Ghaziabad</div>
-            <div style={{marginTop:"16px", display:"grid", gap:"10px"}}>
-              <a href="tel:8796284796" style={{background:"#111827", color:"#fff", padding:"14px", borderRadius:"12px", textDecoration:"none", fontWeight:"900", fontSize:"15px"}}>📞 8796284796 - Call Now</a>
-              <a href="https://wa.me/918796284796" style={{background:"#f1f5f9", color:"#111", padding:"12px", borderRadius:"12px", textDecoration:"none", fontWeight:"800", fontSize:"13px"}}>WhatsApp Us</a>
-            </div>
-            <button onClick={()=>setShowPopup(false)} style={{marginTop:"14px", border:"none", background:"none", color:"#94a3b8", fontSize:"13px", cursor:"pointer"}}>Maybe Later</button>
+            <div style={{fontSize:"13px", color:"#64748b", marginTop:"6px"}}>Technician available nearby - 30 min arrival</div>
+            <a href="tel:8796284796" style={{display:"block", marginTop:"16px", background:"#111827", color:"#fff", padding:"14px", borderRadius:"12px", textDecoration:"none", fontWeight:"900"}}>📞 8796284796 - Call Now</a>
+            <button onClick={()=>setShowPopup(false)} style={{marginTop:"12px", border:"none", background:"none", color:"#94a3b8", fontSize:"13px"}}>Maybe Later</button>
           </div>
         </div>
       )}
